@@ -43,7 +43,7 @@ export default class Deck {
 }
 
 class Card {
-  constructer(suit, value) {
+  constructor(suit, value) {
     this.suit = suit;
     this.value = value;
   }
@@ -56,7 +56,7 @@ class Card {
     const cardDiv = document.createElement("div");
     cardDiv.innerText = this.suit;
     cardDiv.classList.add("card", this.color);
-    cardDiv.dataset.value = `${this.value}${this.suit}`;
+    cardDiv.dataset.value = `${this.value} ${this.suit}`;
     return cardDiv;
   }
 }
